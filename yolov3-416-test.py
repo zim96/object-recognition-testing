@@ -16,7 +16,7 @@ def draw_bounding_box(img, class_id, confidence, x, y, x_plus_w, y_plus_h):
     cv.rectangle(img, (x,y), (x_plus_w,y_plus_h), color, 2)
     cv.putText(img, label, (x-10,y-10), cv.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
-net = cv.dnn.readNet("yolov3.weights", "yolov3.cfg")
+net = cv.dnn.readNet("yolov3.weights", "yolov3-416.cfg")
 classes = []
 
 with open("coco.names", "r") as f:
